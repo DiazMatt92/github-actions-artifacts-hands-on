@@ -29,5 +29,8 @@ jobs:
         name: hello-artifact
         path: ./artifacts
 
+    - name: Test file exist
+      run: grep -i "hello" ./artifacts/hello.txt
+
     - name: Read file
       run: cat ./artifacts/hello.txt
